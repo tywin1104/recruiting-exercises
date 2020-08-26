@@ -25,7 +25,7 @@ class InventoryAllocator:
         """Fulfill the given order and compute best approach for shipments
 
         Fulfill the given order using provided inventory distribution data.
-        Compute and return the most economicway for the order to be shipped.
+        Compute and return the most economic way for the order to be shipped.
 
         Returns:
             A list of dicts mapping warehouse names to the corresponding
