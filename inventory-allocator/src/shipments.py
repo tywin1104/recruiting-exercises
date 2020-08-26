@@ -22,6 +22,22 @@ class InventoryAllocator:
         return True
 
     def fulfill_order(self):
+        """Fulfill the given order and compute best approach for shipments
+
+        Fulfill the given order using provided inventory distribution data.
+        Compute and return the most economicway for the order to be shipped.
+
+        Returns:
+            A list of dicts mapping warehouse names to the corresponding
+            fulfilled inventory item and quantity for the given order.
+            If the given order is not possible to fulfill due to insufficient
+            inventory, will return an empty list.
+
+            example:
+
+            [{'warehouse1': {'apple': 17, 'pie': 5}},
+             {'warehouse2': {'pie': 4,'banana': 4}}]
+        """
         if not self._enough_inventory():
             return []
 
